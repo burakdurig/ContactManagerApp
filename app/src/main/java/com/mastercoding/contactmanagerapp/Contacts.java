@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 // if no variable is assigned to @Entity, then it will automatically be assigned to class name
-@Entity(tableName = "contacts")
+@Entity(tableName = "contacts_table")
 public class Contacts {
     // the below @ColumnInfo will automatically assign table name without using the variable name
     @ColumnInfo(name = "contact_id")
@@ -17,8 +17,7 @@ public class Contacts {
     @ColumnInfo(name = "contact_email")
     private String email;
 
-    public Contacts(int id, String name, String email) {
-        this.id = id;
+    public Contacts(String name, String email) {
         this.name = name;
         this.email = email;
     }
